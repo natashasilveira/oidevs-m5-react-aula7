@@ -2,7 +2,7 @@ import fusca from './fusca.png'
 import './App.css';
 
 function App() {
-  return (
+    return (
     <div className="App">
       <header className="App-header">
         <img src={fusca} className="App-logo" alt="logo" />
