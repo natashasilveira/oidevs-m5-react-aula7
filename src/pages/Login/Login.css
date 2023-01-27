@@ -1,0 +1,9 @@
+.container {
+  background-color: #353b51;
+  color: white;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  width: 300px;
+  padding: 20px;
+}

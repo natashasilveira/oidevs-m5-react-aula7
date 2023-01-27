@@ -2,7 +2,7 @@ body {
   background-color: #474f6b;  
 }
 
-.App {
+/* .App {
   background-color: #353b51;
   color: white;
   display:flex;
@@ -10,7 +10,7 @@ body {
   text-align: center;
   width: 300px;
   padding: 20px;
-}
+} */
 
 #root {
   height: 100vh;
