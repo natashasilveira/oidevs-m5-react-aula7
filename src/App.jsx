@@ -1,23 +1,18 @@
-import fusca from './fusca.png'
+import Title from './components/Title'
 import './App.css';
+import Button from './components/Button';
+import Input from './components/Input';
+import Link from './components/Link';
 
 function App() {
     return (
     <div className="App">
-      <header className="App-header">
-        <img src={fusca} className="App-logo" alt="logo" />
-        <p>
-          Fusca Vermelho
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React - Oi Devs
-        </a>
-      </header>
+      <Title text="Login" />
+      <Input text="Name" label="user" />
+      <Input text="Password" label="password"/>
+      <Button link="https://discord.gg/kd9nvMy5" btnName="Login" />
+      <Link text="Esqueceu a senha?" link="https://www.google.com/" />
+
     </div>
   );
 }
