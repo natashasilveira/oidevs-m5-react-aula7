@@ -1,7 +1,8 @@
+import './Button.css'
 
-function Button({link, btnName}) {
+function Button({url, btnName}) {
   return (
-    <a href={link}>
+    <a href={url}>
       <button>{btnName}</button>
     </a>
   )

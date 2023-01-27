@@ -9,9 +9,9 @@ function App() {
     <div className="App">
       <Title text="Login" />
       <Input text="Name" label="user" />
-      <Input text="Password" label="password"/>
-      <Button link="https://discord.gg/kd9nvMy5" btnName="Login" />
-      <Link text="Esqueceu a senha?" link="https://www.google.com/" />
+      <Input text="Password" label="password" />
+      <Button url="https://discord.gg/kd9nvMy5" btnName="Login" />
+      <Link text="Esqueceu a senha?" url="https://www.google.com/" />
 
     </div>
   );
