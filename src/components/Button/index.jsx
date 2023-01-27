@@ -1,10 +1,12 @@
 import './Button.css'
 
-function Button({url, btnName}) {
+function Button({ btnName, redirect }) {
   return (
-    <a href={url}>
-      <button>{btnName}</button>
-    </a>
+    <button
+      onClick={redirect}
+    >
+      {btnName}
+    </button>
   )
 }
 
