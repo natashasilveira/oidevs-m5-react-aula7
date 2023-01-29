@@ -1,3 +1,11 @@
+# Tópicos solicitados
+1. Troque todas as funções ES5 para arrow function (ES6)
+2. Utilize a biblioteca PropTypes para validar duas quaisquer propriedades de seus componentes
+3. Utilize a propriedade defaultProps da lib PropTypes para passar valores padrão para seus componentes
+4. Crie um state utilizando o Hook do React useState para definir o título da nossa tela de login
+5. Use um componente button para alterar o state da propriedade acima (title da tela de login)
+6. Adicione uma label na nossa tela de login e a modifique de acordo com o valor digitado pelo usuário no input "Usuário"
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
