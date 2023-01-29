@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
 import Title from "../../components/Title";
 
-function Home() {
+const Home = () => {
 
   const navigate = useNavigate();
 
@@ -11,7 +11,7 @@ function Home() {
       <Title text="Home" />
       <Button
         btnName="Voltar"
-        redirect={() => navigate("/")}
+        click={() => navigate("/")}
       />
     </div>
   );

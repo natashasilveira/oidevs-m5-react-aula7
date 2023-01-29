@@ -1,6 +1,8 @@
 import './Input.css';
+import PropTypes from 'prop-types';
 
-function Input({label, text, hideContent}) {
+
+const Input = ({label, text, hideContent}) => {
   return (
     <div className='inputContainer'>
       <label htmlFor={label}>{text}</label>
@@ -9,6 +11,10 @@ function Input({label, text, hideContent}) {
     </div>
 
   )
+}
+
+Input.propTypes = {
+  label: PropTypes.string
 }
 
 export default Input;

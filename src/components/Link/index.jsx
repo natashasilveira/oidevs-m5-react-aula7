@@ -1,5 +1,5 @@
 
-function Link({text, url}) {
+const Link = ({text, url}) => {
   return <a href={url}>{text}</a>
 }
 
