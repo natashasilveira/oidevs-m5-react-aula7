@@ -17,7 +17,9 @@ const Input = ({label, text, hideContent, change}) => {
 }
 
 Input.propTypes = {
-  label: PropTypes.string
+  label: PropTypes.string,
+  text: PropTypes.string,
+  change: PropTypes.func
 }
 
 export default Input;
