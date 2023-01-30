@@ -12,10 +12,30 @@ const Login = () => {
   const navigate = useNavigate();
   const [title, setTitle] = useState("Login");
   const [subtitle, setSubtitle] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [users, setUsers] = useState([
+    {
+      username: 'Raniel',
+      password: 'oidevs'
+    },
+    {
+      username: 'Juliana',
+      password: 'oidevs'
+    },
+    {
+      username: 'Sueli',
+      password: 'oidevs'
+    }
+  ])
 
   const changeSubtitle = () => {
     const user = document.getElementById('user').value;
     setSubtitle(user);
+  }
+
+  const authenticateUser = () => {
+    
   }
 
 
