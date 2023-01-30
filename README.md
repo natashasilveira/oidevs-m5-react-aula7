@@ -1,10 +1,7 @@
 # Tópicos solicitados
-1. Troque todas as funções ES5 para arrow function (ES6)
-2. Utilize a biblioteca PropTypes para validar duas quaisquer propriedades de seus componentes
-3. Utilize a propriedade defaultProps da lib PropTypes para passar valores padrão para seus componentes
-4. Crie um state utilizando o Hook do React useState para definir o título da nossa tela de login
-5. Use um componente button para alterar o state da propriedade acima (title da tela de login)
-6. Adicione uma label na nossa tela de login e a modifique de acordo com o valor digitado pelo usuário no input "Usuário"
+1. Inclusão de autenticação do usuário.
+2. Ao digitar um usuário e senha inválidos troque a cor da label do input para vermelho. useState() // inputColor, setInputColor // setInputColor("red")
+3. Exiba uma mensagem utilizando o nosso <Subtitle /> para informar ao usuário que ele digitou suas credenciais inválidas. Renderização Condicional
 
 # Getting Started with Create React App
 
