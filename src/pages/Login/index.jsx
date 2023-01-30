@@ -6,6 +6,7 @@ import Link from '../../components/Link';
 import ErrorMessage from '../../components/ErrorMessage';
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
+import UserItem from '../../components/UserItem';
 
 const Login = () => {
 
@@ -16,14 +17,17 @@ const Login = () => {
   let [loginFail, setLoginFail] = useState(false);
   const [users, setUsers] = useState([
     {
+      id: 1,
       username: 'Raniel',
       password: 'oidevs'
     },
     {
+      id: 2,
       username: 'Juliana',
       password: 'oidevs'
     },
     {
+      id: 3,
       username: 'Sueli',
       password: 'oidevs'
     }
@@ -31,12 +35,12 @@ const Login = () => {
 
   const authenticateUser = () => {
     const loggedUser = users.find((currentUser) =>
-        currentUser.username === username &&
-        currentUser.password === password
+      currentUser.username === username &&
+      currentUser.password === password
     );
 
-    if(loggedUser) {
-      navigate("/home"); 
+    if (loggedUser) {
+      navigate("/home");
     } else {
       setLoginFail(true);
     }
@@ -47,14 +51,14 @@ const Login = () => {
     <div className="container">
       <Title text={title} />
       {loginFail && <ErrorMessage loginFail={loginFail} />}
-      <Input 
-        text="Usuário" 
-        label="user" 
+      <Input
+        text="Usuário"
+        label="user"
         loginFail={loginFail}
         change={(e) => setUsername(e.target.value)} />
-      <Input 
-        text="Senha" 
-        label="password" hideContent 
+      <Input
+        text="Senha"
+        label="password" hideContent
         loginFail={loginFail}
         change={(e) => setPassword(e.target.value)} />
       <Button
@@ -65,6 +69,12 @@ const Login = () => {
         btnName="Trocar Título"
         click={() => setTitle("Título Trocado")} />
       <Link text="Esqueceu a senha?" url="https://www.google.com/" />
+
+      <ul>
+        {users.map((user) => (
+          <UserItem key={user.id} username={user.username} />
+        ))}
+      </ul>
     </div>
   );
 }
