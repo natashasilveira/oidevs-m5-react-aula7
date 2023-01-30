@@ -46,7 +46,7 @@ const Login = () => {
   return (
     <div className="container">
       <Title text={title} />
-      {loginFail && <ErrorMessage />}
+      {loginFail && <ErrorMessage loginFail={loginFail} />}
       <Input 
         text="Usuário" 
         label="user" 

@@ -3,7 +3,7 @@ import './ErrorMessage.css';
 const ErrorMessage = () => {
   return (
     <div className='error-container'>
-      <p>Informações Inválidas!</p>
+      <p>Usuário e/ou Senha Inválidos!</p>
     </div>
   )
 }

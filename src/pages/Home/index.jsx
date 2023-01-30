@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
 import Title from "../../components/Title";
+import Subtitle from "../../components/Subtitle";
 
 const Home = () => {
 
@@ -9,6 +10,7 @@ const Home = () => {
   return (
     <div className="container">
       <Title text="Home" />
+      <Subtitle />
       <Button
         btnName="Voltar"
         click={() => navigate("/")}
