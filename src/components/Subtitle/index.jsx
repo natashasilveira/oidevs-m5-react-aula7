@@ -10,8 +10,4 @@ Subtitle.propTypes = {
   text: PropTypes.string
 }
 
-Subtitle.defaultProps = {
-  text: ''
-}
-
 export default Subtitle;

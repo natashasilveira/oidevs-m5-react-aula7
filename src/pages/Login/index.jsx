@@ -11,7 +11,7 @@ const Login = () => {
 
   const navigate = useNavigate();
   const [title, setTitle] = useState("Login");
-  const [subtitle, setSubtitle] = useState();
+  const [subtitle, setSubtitle] = useState("");
 
   const changeSubtitle = () => {
     const user = document.getElementById('user').value;
