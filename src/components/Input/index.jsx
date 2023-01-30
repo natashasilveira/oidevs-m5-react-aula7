@@ -2,9 +2,15 @@ import './Input.css';
 import PropTypes from 'prop-types';
 
 
-const Input = ({label, text, hideContent, change}) => {
+const Input = ({label, text, loginFail, hideContent, change}) => {
+  let textColor;
+  if(loginFail) textColor = "#830505"
+  else textColor = "white"
+
   return (
-    <div className='inputContainer'>
+    <div className='inputContainer'
+      style={{color: textColor}}
+    >
       <label htmlFor={label}>{text}</label>
       <br></br>
       <input id={label} 
@@ -12,7 +18,6 @@ const Input = ({label, text, hideContent, change}) => {
         onChange={change}
       />
     </div>
-
   )
 }
 

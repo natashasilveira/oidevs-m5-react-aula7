@@ -1,0 +1,12 @@
+.error-container{
+  background-color: #830505;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.error-container p {
+  margin: 0px;
+}

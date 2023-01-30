@@ -3,7 +3,7 @@ import Title from '../../components/Title';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import Link from '../../components/Link';
-// import Subtitle from '../../components/Subtitle';
+import ErrorMessage from '../../components/ErrorMessage';
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 
@@ -11,9 +11,9 @@ const Login = () => {
 
   const navigate = useNavigate();
   const [title, setTitle] = useState("Login");
-  const [subtitle, setSubtitle] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  let [loginFail, setLoginFail] = useState(false);
   const [users, setUsers] = useState([
     {
       username: 'Raniel',
@@ -29,26 +29,16 @@ const Login = () => {
     }
   ]);
 
-  // const changeSubtitle = () => {
-  //   const user = document.getElementById('user').value;
-  //   setSubtitle(user);
-  // }
-
   const authenticateUser = () => {
-    console.log("Autenticando Usuário");
-    console.log(username);
-    console.log(password);
-    const existUser = users.find((currentUser) => {
-      if (
+    const loggedUser = users.find((currentUser) =>
         currentUser.username === username &&
         currentUser.password === password
-      )
-      return currentUser
-    });
+    );
 
-    if(existUser) {
-      console.log(existUser); 
+    if(loggedUser) {
       navigate("/home"); 
+    } else {
+      setLoginFail(true);
     }
   }
 
@@ -56,14 +46,16 @@ const Login = () => {
   return (
     <div className="container">
       <Title text={title} />
-      {/* <Subtitle text={subtitle} /> */}
+      {loginFail && <ErrorMessage />}
       <Input 
-        text="Name" 
+        text="Usuário" 
         label="user" 
+        loginFail={loginFail}
         change={(e) => setUsername(e.target.value)} />
       <Input 
-        text="Password" 
+        text="Senha" 
         label="password" hideContent 
+        loginFail={loginFail}
         change={(e) => setPassword(e.target.value)} />
       <Button
         btnName="Entrar"
