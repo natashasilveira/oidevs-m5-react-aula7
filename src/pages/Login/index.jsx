@@ -31,7 +31,7 @@ const Login = () => {
     },
     {
       id: 4,
-      username: 'Julia ',
+      username: 'Julia',
       password: 'oidevs'
     }
   ]);
