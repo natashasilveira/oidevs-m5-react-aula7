@@ -8,7 +8,6 @@ const Home = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
-
   const { listOfUsers } = location.state;
 
   return (
