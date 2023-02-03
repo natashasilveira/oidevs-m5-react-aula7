@@ -1,7 +1,9 @@
 # Tópicos solicitados
-1. Inclusão de autenticação do usuário.
-2. Ao digitar um usuário e senha inválidos troque a cor da label do input para vermelho. useState() // inputColor, setInputColor // setInputColor("red")
-3. Exiba uma mensagem utilizando o nosso <Subtitle /> para informar ao usuário que ele digitou suas credenciais inválidas. Renderização Condicional
+1. Insira um atributo ID e o defina para cada usuário na nossa lista de usuários.
+2. Renderize a nossa lista de usuários dentro da página de login. 
+3. Removendo alguns Ids
+4. Duplique alguns Ids
+5. Renderize a lista de usuários dentro do nosso componente Home usando useLocation() = > state.
 
 # Getting Started with Create React App
 

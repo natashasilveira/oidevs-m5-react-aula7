@@ -6,8 +6,6 @@ import Link from '../../components/Link';
 import ErrorMessage from '../../components/ErrorMessage';
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
-import UserItem from '../../components/UserItem';
-
 const Login = () => {
 
   const navigate = useNavigate();
@@ -30,6 +28,11 @@ const Login = () => {
       id: 3,
       username: 'Sueli',
       password: 'oidevs'
+    },
+    {
+      id: 4,
+      username: 'Julia ',
+      password: 'oidevs'
     }
   ]);
 
@@ -40,7 +43,7 @@ const Login = () => {
     );
 
     if (loggedUser) {
-      navigate("/home");
+      navigate("/home", {state: { listOfUsers: users }});
     } else {
       setLoginFail(true);
     }
@@ -70,11 +73,7 @@ const Login = () => {
         click={() => setTitle("Título Trocado")} />
       <Link text="Esqueceu a senha?" url="https://www.google.com/" />
 
-      <ul>
-        {users.map((user) => (
-          <UserItem key={user.id} username={user.username} />
-        ))}
-      </ul>
+      
     </div>
   );
 }
